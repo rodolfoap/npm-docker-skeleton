@@ -8,10 +8,9 @@ before_install:
 script:
   - docker run rodolfoap/test npm run test -- --coverage
 
-
 deploy:
   provider: elasticbeanstalk
-  region: "us-west-3"
+  region: "eu-west-3"
   app: "test"
   env: "Test-env"
   bucket_name: "elasticbeanstalk-eu-west-3-752090470302"
