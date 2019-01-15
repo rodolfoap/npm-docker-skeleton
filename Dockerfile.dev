@@ -5,6 +5,6 @@ WORKDIR '/app'
 COPY package.json .
 RUN npm install
 
-# COPY . . # Not required! it is going to mount the volume!
+COPY . .
 
 CMD ["npm", "run", "start"]
