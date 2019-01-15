@@ -9,16 +9,15 @@ script:
   - docker run rodolfoap/test npm run test -- --coverage
 
 
-#deploy:
-#  provider: elasticbeanstalk
-#  region: "us-west-2"
-#  app: "docker"
-#  env: "Docker-env"
-#  bucket_name: "elasticbeanstalk-us-west-2-306476627547"
-#  bucket_path: "docker"
-#  on:
-#    branch: master
-#  access_key_id: $AWS_ACCESS_KEY
-#  secret_access_key:
-#    secure: "$AWS_SECRET_KEY"
-#
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-3"
+  app: "test"
+  env: "Test-env"
+  bucket_name: "elasticbeanstalk-eu-west-3-752090470302"
+  bucket_path: "test"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
